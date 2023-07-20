@@ -1,0 +1,76 @@
+package shape;
+
+public class Square {
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    public double getArea() {
+        return side * side;
+    }
+
+    public double getPerimeter() {
+        return 4 * side;
+    }
+}
+
+package shape;
+
+public class Triangle {
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+
+    public double getPerimeter() {
+        // Implement the logic to calculate the perimeter of a triangle
+        // based on the given dimensions
+        return 0;
+    }
+}
+package shape;
+
+public class Circle {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+import shape.Square;
+import shape.Triangle;
+import shape.Circle;
+
+public class Main {
+    public static void main(String[] args) {
+        Square square = new Square(5);
+        System.out.println("Square Area: " + square.getArea());
+        System.out.println("Square Perimeter: " + square.getPerimeter());
+
+        Triangle triangle = new Triangle(3, 4);
+        System.out.println("Triangle Area: " + triangle.getArea());
+        System.out.println("Triangle Perimeter: " + triangle.getPerimeter());
+
+        Circle circle = new Circle(2.5);
+        System.out.println("Circle Area: " + circle.getArea());
+        System.out.println("Circle Circumference: " + circle.getPerimeter());
+    }
+}
